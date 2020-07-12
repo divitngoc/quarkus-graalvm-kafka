@@ -18,7 +18,7 @@ docker-compose up
 ### Quarkus App on Docker
 To build and run the application natively on docker, we can use the Dockerfile.multistage:
 
-##### Docker Build
+#### Docker Build
 
 ```
 docker build -f ./docker/Dockerfile.multistage -t quarkus-app ./quarkus-api-server
@@ -26,7 +26,9 @@ docker build -f ./docker/Dockerfile.multistage -t quarkus-app ./quarkus-api-serv
 
 <br>
 
-If not, we can use the Dockerfile.native file instead but we must first run package our application:
+##### Or
+
+If not, we can use the Dockerfile.native file instead but we must first package our application:
 
 ```
 mvn -f quarkus-api-server/pom.xml package -Pnative -Dquarkus.native.container-build=true
@@ -38,7 +40,7 @@ and then:
 docker build -f ./docker/Dockerfile.native -t quarkus-app ./quarkus-api-server
 ```
 
-##### Docker run
+#### Docker run
 and finally, run it with:
 
 ```
