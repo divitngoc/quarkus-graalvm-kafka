@@ -7,11 +7,11 @@
 #
 # Then, build the image with:
 #
-# docker build -f docker/Dockerfile.native -t quarkus-api-server .
+# docker build -f docker/Dockerfile.native -t quarkus-app ./quarkus-api-server
 #
 # Then run the container using:
 #
-# docker run -i --rm -p 8081:8081 quarkus-api-server
+# docker run -i --rm -p 8081:8081 quarkus-app
 #
 ###
 FROM registry.access.redhat.com/ubi8/ubi-minimal

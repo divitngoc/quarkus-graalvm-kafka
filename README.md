@@ -18,7 +18,7 @@ docker-compose up
 ### Quarkus App on Docker
 To build and run the application natively on docker, we can use the Dockerfile.multistage:
 
-#### Docker Build
+#### Docker build
 
 ```
 docker build -f ./docker/Dockerfile.multistage -t quarkus-app ./quarkus-api-server
@@ -46,3 +46,11 @@ and finally, run it with:
 ```
 docker run -i --rm -p 8081:8081 quarkus-app
 ```
+
+### Monitoring
+Ctop
+
+```
+docker run -ti -v /var/run/docker.sock:/var/run/docker.sock quay.io/vektorlab/ctop:latest
+```
+

@@ -22,8 +22,7 @@ import com.divitngoc.model.Collaborator;
 
 /**
  *
- * This endpoint is meant for testing.
- * See also collaborators.html in resources
+ * This endpoint is meant for testing. See also collaborators.html in resources
  *
  */
 @Path("/collaborators")
@@ -50,15 +49,15 @@ public class CollaboratorResource {
 
     @POST
     @APIResponse(content = @Content(schema = @Schema(implementation = Collaborator.class, type = SchemaType.ARRAY)))
-    public Set<Collaborator> add(final Collaborator fruit) {
-        collaborators.add(fruit);
+    public Set<Collaborator> add(final Collaborator collab) {
+        collaborators.add(collab);
         return collaborators;
     }
 
     @DELETE
     @APIResponse(content = @Content(schema = @Schema(implementation = Collaborator.class, type = SchemaType.ARRAY)))
-    public Set<Collaborator> delete(final Collaborator fruit) {
-        collaborators.removeIf(collaborator -> collaborator.getName().contentEquals(fruit.getName()));
+    public Set<Collaborator> delete(final Collaborator collab) {
+        collaborators.removeIf(collaborator -> collaborator.getName().contentEquals(collab.getName()));
         return collaborators;
     }
 
