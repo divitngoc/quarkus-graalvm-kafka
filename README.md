@@ -40,7 +40,7 @@ and then:
 docker build -f ./docker/Dockerfile.native -t quarkus-app ./quarkus-api-server
 ```
 
-#### Docker run
+### Docker run
 and finally, run it with:
 
 ```
